@@ -1,0 +1,22 @@
+name: GitHub Actions Build GitHub.io Page
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - run: npm ci
+    - run: npm run build  
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.automate_publish_gitpage }}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./build
+        BUILD_SCRIPT: npm install && npm run build
