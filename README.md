@@ -3,7 +3,7 @@ home: true
 heroImage: /hero.png
 heroText: tsinan.io
 tagline: 我的技术博客
-actionText:  知乎主页 →
+actionText:  知乎 →
 actionLink: 'https://www.zhihu.com/people/tsinan83'
 features:
 - title: 系统架构
