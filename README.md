@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 heroText: tsinan.io
-tagline: 技术博客
+tagline: 2020
 actionText:  知乎 →
 actionLink: 'https://www.zhihu.com/people/tsinan83'
 features:
