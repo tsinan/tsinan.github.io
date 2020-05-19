@@ -1,5 +1,6 @@
 
 module.exports = {
+  dest: 'build',
   title: 'Tsinan Tech',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
