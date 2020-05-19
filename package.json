@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "tsinan blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "bash deploy.sh",
+    "build": "vuepress build .",
+    "dev": "vuepress dev ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:tsinan/tsinan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.3",
+    "@vuepress/plugin-medium-zoom": "^1.0.3",
+    "vuepress": "^1.0.3"
+  },
+  "dependencies": {
+    "less": "^3.10.1",
+    "less-loader": "^5.0.0"
+  },
+  "homepage": "http://tsinan.github.io/"
+}
