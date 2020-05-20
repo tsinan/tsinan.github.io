@@ -210,7 +210,7 @@ typora-root-url: ../.vuepress/public/
 
 完成一次随机读，至少需用时：
 
- 12ms - 13ms；
+ 12ms - 13ms
 
 
 
@@ -228,4 +228,98 @@ typora-root-url: ../.vuepress/public/
 | Seek time6 (read/write, ms, typical)   | 8.0, 8.6        | 寻道时间，10K转速盘一般是5ms                                 |
 | 平均延迟(毫秒)  / Latency average (ms) | 4.16            | 旋转半圈用的时间，也可以认为是寻道之后的平均旋转时间，60秒/(7200转/60秒)*(1/2)=4.16 |
 |                                        |                 |                                                              |
+
+## 5. SATA盘与SSD盘的吞吐量对比
+
+###  数据一
+
+顺序读：
+
+SATA硬盘    bw(io带宽)=205MB/s, iops=51455, util=99.87%(磁盘使用率)
+
+ SSD硬盘    bw=311MB/s, iops=77911, util=99.87%
+
+随机读：
+
+SATA硬盘    bw=547KB/s, iops=133, util=99.92%
+
+SSD硬盘    bw=246MB, iops=61746, util=99.87%
+
+顺序写：
+
+SATA硬盘   bw=197MB/s, iops=49408, util=100.00%
+
+SSD硬盘    bw=333MB/s, iops=83333, util=99.88%
+
+随机写
+
+SATA硬盘    bw=558KB/s, iops=136, util=99.91%
+
+SSD硬盘    bw=120MB/s, iops=30168, util=99.89%
+
+
+
+结论： 从结果来看，SSD硬盘在顺序读写上面是SATA硬盘的1.5~1.7 倍左右，高的并不算明显；
+
+​            而在随机读写方面，SSD硬盘是SATA硬盘的200~400倍。
+
+### 数据二
+
+顺序读
+
+在对4KB数据包进行连续读的情况下:
+
+SSD其速度可以达到404M/S，IOPS达到103K/S
+
+SAS其速度可以达到190M/S，IOPS达到41K/S
+
+SATA其速度可以达到124M/S，IOPS达到31K/S
+
+顺序读，SAS总体表现是SATA硬盘的1.5倍，SSD总体表现是SATA硬盘的4倍。
+
+ 
+
+顺序写
+
+同样的4KB数据包顺序写的情况下，
+
+SSD其速度可以达到592M/S，IOPS达到152K/S
+
+SAS其速度可以达到190M/S，IOPS达到36K/S
+
+SATA其速度可以达到118M/S，IOPS达到31K/S
+
+顺序写，SAS总体表现与SATA硬盘为相同数量级，而SSD整体超过SATA和SAS。
+
+ 
+
+随机读
+
+同样的4KB数据包随机读的情况下，
+
+SSD其速度可以达到505M/S，IOPS达到129K/S
+
+SAS其速度可以达到1784K/S，IOPS达到456/S
+
+SATA其速度可以达到466K/S，IOPS达到114/S
+
+随机读，SAS总体表现是SATA硬盘的4倍，SSD总体表现是SATA硬盘的一千多倍。
+
+ 
+
+随机写
+
+同样的4KB数据包随机写的情况下，
+
+SSD其速度可以达到549M/S，IOPS达到140K/S
+
+SAS其速度可以达到1950K/S，IOPS达到512/S
+
+SATA其速度可以达到548K/S，IOPS达到134/S
+
+在接下来的4KB数据包随机写操作中，SSD卡再次展示了其高超的IO性能，高达549M/S的随机写速率，IOPS高达140K。相比之下，SSD总体表现是SATA硬盘的一千多倍。
+
+
+
+
 
