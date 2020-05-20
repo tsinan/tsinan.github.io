@@ -20,13 +20,15 @@
 2. [toshi][2] (Rust Language)
 3. [rucene][3] (Rust Language)
 4. [sonic][4] (Rust Language)
-5. [pisa][5] (C++ Language)
+5. [perlin][5] (Rust Language)
+5. [pisa][6] (C++ Language)
 
 [1]: https://github.com/tantivy-search/tantivy
 [2]: https://github.com/toshi-search/Toshi
 [3]: https://github.com/zhihu/rucene
 [4]: https://github.com/valeriansaliou/sonic
-[5]: https://github.com/pisa-engine/pisa
+[5]: https://github.com/CurrySoftware/perlin
+[6]: https://github.com/pisa-engine/pisa
 
 
 ## 面向Analytics的数据分析产品
